@@ -1,0 +1,16 @@
+.cardWrap {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+  height: 100px;
+  background-color: #2e3649;
+  margin: auto;
+  width: 50%;
+  margin-top: 100px;
+}
+
+.cardWrap h3 {
+  color: #ffff;
+}

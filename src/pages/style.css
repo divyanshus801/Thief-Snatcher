@@ -1,0 +1,206 @@
+/* Home Slider */
+
+.carousel-status,
+.legend {
+  display: none;
+}
+.slider-container {
+  height: 98vh;
+}
+.carousel-root {
+  margin: 0;
+  padding: 0;
+}
+
+.home-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: #91744f;
+  padding: 50px;
+  border-radius: 12px;
+  background: url("../assets/images/criminal.png") center no-repeat;
+  background-size: cover;
+}
+
+.home-content h1 {
+  font-size: 3em;
+  margin-bottom: 1em;
+  color: #fff;
+}
+
+.home-content p {
+  font-size: 1.5em;
+  margin-bottom: 2em;
+  color: #fff;
+}
+
+.start-button {
+  background-color: #f0545e;
+  color: #fff;
+  padding: 18px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.start-button:hover {
+  background-color: #55636f;
+}
+
+/* Cops Section */
+
+.cops h2 {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 2em;
+  color: #fff;
+}
+
+.cops-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cop {
+  position: relative;
+  text-align: center;
+  padding: 1.5em;
+  border-radius: 5px;
+  background-color: #2e3649;
+  margin: 1em;
+  transition: box-shadow 0.2s ease-in-out;
+  height: 200px;
+  min-width: 130px;
+  cursor: pointer;
+}
+
+.copActive {
+  position: relative;
+  text-align: center;
+  padding: 1.5em;
+  border-radius: 5px;
+  background-color: #242b3c;
+  margin: 1em;
+  transition: box-shadow 0.2s ease-in-out;
+  height: 200px;
+  min-width: 130px;
+  cursor: pointer;
+  border: 1px solid red;
+}
+
+.cityImg {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.cop:hover {
+  border: 1px solid red;
+}
+
+.cop h3,
+.cop h5,
+.cop p {
+  margin-bottom: 0.5em;
+  font-size: 1.3em;
+  color: #fff;
+}
+
+.copActive h3,
+.copActive h5,
+.copActive p {
+  margin-bottom: 0.5em;
+  font-size: 1.3em;
+  color: #fff;
+}
+
+.cop p:hover {
+  background-color: #32242f;
+  padding: 5px;
+}
+
+.cop h3 {
+  margin-top: 10px;
+}
+
+.cop-description {
+  display: none;
+}
+
+.cop:hover .cop-description {
+  display: block;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 100%;
+}
+
+/* City Selection */
+.city-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.city-selection h2{
+  color: #fff;
+  align-self: flex-start;
+  
+}
+
+/* City Page */
+.cops-city-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 2em 0;
+}
+
+.next-button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  margin-top: 2em;
+  /* disabled {
+    background-color: #ccc;
+    cursor: default;
+  } */
+}
+
+.next-button:hover:not([disabled]) {
+  background-color: #2980b9;
+}
+
+.gameWrap {
+  background-color: #0c0e14;
+  height: 730px;
+  padding: 20px;
+}
+
+.citytext {
+  color: #fff;
+  align-self: flex-start;
+  margin-left: 50px;
+}
+
+.vehicle-selection-page h2 {
+  color: #fff;
+
+}
