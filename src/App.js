@@ -6,15 +6,13 @@ import Result from "./pages/Result";
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" exact element={<HomePage />} />
-          <Route path="/game" exact element={<Index />} />
-          <Route path="/result" exact element={<Result />} />
-        </Routes>
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" exact element={<HomePage />} />
+        <Route path="/game" exact element={<Index />} />
+        <Route path="/result" exact element={<Result />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
