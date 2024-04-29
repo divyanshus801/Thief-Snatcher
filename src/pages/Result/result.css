@@ -1,16 +1,60 @@
 .cardWrap {
-  display: flex;
-
-  align-items: center;
-  justify-content: space-around;
-  border-radius: 5px;
-  height: 100px;
-  background-color: #2e3649;
-  margin: auto;
-  width: 50%;
-  margin-top: 100px;
+ margin-top: 20px;
 }
 
 .cardWrap h3 {
   color: #ffff;
+  margin: 10px;
+}
+
+.cardContainer {
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  border-radius: 5px;
+  background-color: #2e3649;
+  padding: 20px;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+}
+
+
+
+.wrongCard {
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  border-radius: 5px;
+  background-color: #2e3649;
+  padding: 20px;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+}
+
+.wrongCard h3 {
+  color: #ffff;
+  margin: 20px;
+}
+
+.statusText{
+  flex-direction: row;
+ flex-direction: row;
+}
+
+.icon {
+  position: absolute;
+  top: 160px;
+  left: 30%;
+ 
+}
+
+.wrongImg {
+  background-color:#8a909f ;
+  border-radius: 50%;
 }

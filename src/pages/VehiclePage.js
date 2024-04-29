@@ -4,22 +4,34 @@ import EVbike from "../assets/images/evbike.png";
 import EVCar from "../assets/images/evcar.png";
 import EvSuv from "../assets/images/evsuv.png";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
-const VehiclePage = () => {
+const VehiclePage = ({ selectedCity }) => {
   const navigate = useNavigate();
-  const [vehicles, setVehicles] = useState([
+  const [vehicles, setVehicles] = useState([]);
+  const [selectedVehicles, setSelectedVehicles] = useState(null);
+
+  const evImages = [
     { img: EVbike, type: "EV Bike", range: 60, count: 2 },
     { img: EVCar, type: "EV Car", range: 100, count: 1 },
     { img: EvSuv, type: "EV SUV", range: 120, count: 1 },
-  ]);
-  const [selectedVehicles, setSelectedVehicles] = useState(null);
+  ];
 
-  // useEffect(() => {
-  //   // setCitieDistance(
-  //   //   cities?.reduce((acc, city) => ({ ...acc, [city.name]: city.distance }), {})
-  //   // );
-  //   setVehicles(vehicles);
-  // }, []);
+  useEffect(() => {
+    getEv();
+  }, []);
+
+  const getEv = async () => {
+    axios
+      .get("https://chor-police1.onrender.com/GET_VEHICLE")
+      .then((res) => {
+        setVehicles(res.data);
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   const handleEVSelect = (vehicle) => {
     setSelectedVehicles(vehicle);
@@ -35,26 +47,29 @@ const VehiclePage = () => {
           <div
             key={index}
             className={
-              ev?.type === selectedVehicles?.type ? "copActive" : "cop"
+              ev?.Kind === selectedVehicles?.Kind ? "copActive" : "cop"
             }
             onClick={() => handleEVSelect(ev)}
           >
             <img
-              src={ev.img}
+              src={evImages[index].img}
               alt="cityName"
               width="100%"
               height="60%"
               className="cityImg"
             />
             <h3>
-              {ev.type} - {ev.range} - {ev.count}
+              {ev.Kind} - {ev.Range} - {ev.Count}
             </h3>
           </div>
         ))}
       </div>
 
       {selectedVehicles && (
-        <button className="start-button" onClick={() => navigate("/result")}>
+        <button className="start-button" onClick={() => {
+          console.log( selectedCity, selectedVehicles )
+          navigate("/result", { state: {selectedCity, selectedVehicles} })
+          }}>
           Next: Capture the Criminal!
         </button>
       )}

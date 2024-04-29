@@ -18,7 +18,7 @@ function Index() {
           setIsVehicle={setIsVehicle}
         />
       ) : (
-        <VehiclePage setIsVehicle={setIsVehicle} />
+        <VehiclePage setIsVehicle={setIsVehicle} selectedCity={selectedCity} />
       )}
     </div>
   );
